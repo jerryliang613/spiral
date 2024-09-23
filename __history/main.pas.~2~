@@ -1,0 +1,9 @@
+unit main;
+
+interface
+procedure DrawSpiral();
+implementation
+procedure DrawSpiral();
+begin
+end;
+end.

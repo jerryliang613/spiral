@@ -1,0 +1,11 @@
+unit main;
+
+interface
+uses System.Types;
+
+procedure DrawSpiral( loop: Integer; threshold:integer; gap:Single; centerPoint:TPointF);
+implementation
+procedure DrawSpiral(loop: Integer; threshold:integer; gap:Single; centerPoint:TPointF);
+begin
+end;
+end.

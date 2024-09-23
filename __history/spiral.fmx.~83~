@@ -1,0 +1,145 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Spiral'
+  ClientHeight = 600
+  ClientWidth = 960
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Label2: TLabel
+    Align = Scale
+    Position.X = 251.139236450195300000
+    Position.Y = 60.000000000000000000
+    Size.Width = 104.303787231445300000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Gap between loop'
+    TabOrder = 5
+  end
+  object TrackBar1: TTrackBar
+    Align = Scale
+    CanParentFocus = True
+    Max = 15.000000000000000000
+    Min = 5.000000000000000000
+    Orientation = Horizontal
+    Position.X = 378.734191894531300000
+    Position.Y = 60.000000000000000000
+    Size.Width = 106.329101562500000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 84
+    Value = 10.000000000000000000
+    OnChange = TrackBar1Change
+  end
+  object Label4: TLabel
+    Align = Scale
+    Position.X = 535.696228027343800000
+    Position.Y = 65.000000000000000000
+    Size.Width = 41.518981933593750000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Zoom'
+    TabOrder = 85
+  end
+  object TrackBar2: TTrackBar
+    Align = Scale
+    CanParentFocus = True
+    Max = 5.000000000000000000
+    Min = 0.500000000000000000
+    Orientation = Horizontal
+    Position.X = 607.594970703125000000
+    Position.Y = 65.000000000000000000
+    Size.Width = 106.329101562500000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 83
+    Value = 1.000000000000000000
+    OnChange = TrackBar2Change
+  end
+  object ComboBox2: TComboBox
+    Align = Scale
+    Items.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5'
+      '6'
+      '7'
+      '8'
+      '9'
+      '10')
+    ItemIndex = 4
+    Position.X = 607.594970703125000000
+    Position.Y = 27.000000000000000000
+    Size.Width = 106.329101562500000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    OnChange = ComboBox2Change
+  end
+  object Label3: TLabel
+    Align = Scale
+    Position.X = 535.696228027343800000
+    Position.Y = 32.000000000000000000
+    Size.Width = 71.898742675781250000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Threshold'
+    TabOrder = 2
+  end
+  object ComboBox1: TComboBox
+    Align = Scale
+    Items.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5'
+      '6'
+      '7'
+      '8'
+      '9'
+      '10')
+    ItemIndex = 2
+    Position.X = 378.734191894531300000
+    Position.Y = 27.000000000000000000
+    Size.Width = 106.329101562500000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    OnChange = ComboBox1Change
+  end
+  object Label1: TLabel
+    Align = Scale
+    Position.X = 251.139236450195300000
+    Position.Y = 27.000000000000000000
+    Size.Width = 127.594955444335900000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Number of revolutions'
+    TabOrder = 0
+  end
+  object ScrollBox1: TScrollBox
+    Align = Scale
+    Position.X = 150.000000000000000000
+    Position.Y = 100.000000000000000000
+    Size.Width = 660.000000000000000000
+    Size.Height = 400.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 86
+    Viewport.Width = 660.000000000000000000
+    Viewport.Height = 400.000000000000000000
+    object PaintBox1: TPaintBox
+      Align = Scale
+      Size.Width = 660.000000000000000000
+      Size.Height = 400.000000000000000000
+      Size.PlatformDefault = False
+      OnPaint = PaintBox1Paint
+    end
+  end
+end
