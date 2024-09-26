@@ -5,12 +5,13 @@
     <Transaction>2024/09/17 19:23:34.000.400,C:\Users\Jerry\Desktop\delphi\spiral.fmx=C:\Users\Jerry\Desktop\delphi\Unit1.fmx</Transaction>
     <Transaction>2024/09/17 19:23:34.000.400,C:\Users\Jerry\Desktop\delphi\spiral.pas=C:\Users\Jerry\Desktop\delphi\Unit1.pas</Transaction>
     <Transaction>2024/09/17 19:24:14.000.734,C:\Users\Jerry\Desktop\delphi\Project.dproj=C:\Users\Jerry\Desktop\delphi\Project1.dproj</Transaction>
-    <Transaction>2024/09/23 18:49:56.319,=C:\Users\Jerry\Desktop\delphi\Unit1.pas</Transaction>
-    <Transaction>2024/09/23 18:50:37.719,C:\Users\Jerry\Desktop\delphi\DrawSpiral.pas=C:\Users\Jerry\Desktop\delphi\Unit1.pas</Transaction>
-    <Transaction>2024/09/23 18:52:53.508,C:\Users\Jerry\Desktop\delphi\main.pas=C:\Users\Jerry\Desktop\delphi\DrawSpiral.pas</Transaction>
-    <Transaction>2024/09/23 19:15:36.599,C:\Users\Jerry\Desktop\delphi\drawSpiral.pas=C:\Users\Jerry\Desktop\delphi\main.pas</Transaction>
-    <Transaction>2024/09/23 19:15:36.646,C:\Users\Jerry\Desktop\delphi\main.pas=C:\Users\Jerry\Desktop\delphi\drawSpiral.pas</Transaction>
-  </Transactions>  <ProjectSortOrder AutoSort="0" SortType="0">
+    <Transaction>2024/09/23 18:49:56.000.319,=C:\Users\Jerry\Desktop\delphi\Unit1.pas</Transaction>
+    <Transaction>2024/09/23 18:50:37.000.719,C:\Users\Jerry\Desktop\delphi\DrawSpiral.pas=C:\Users\Jerry\Desktop\delphi\Unit1.pas</Transaction>
+    <Transaction>2024/09/23 18:52:53.000.508,C:\Users\Jerry\Desktop\delphi\main.pas=C:\Users\Jerry\Desktop\delphi\DrawSpiral.pas</Transaction>
+    <Transaction>2024/09/23 19:15:36.000.599,C:\Users\Jerry\Desktop\delphi\drawSpiral.pas=C:\Users\Jerry\Desktop\delphi\main.pas</Transaction>
+    <Transaction>2024/09/23 19:15:36.000.646,C:\Users\Jerry\Desktop\delphi\main.pas=C:\Users\Jerry\Desktop\delphi\drawSpiral.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="main.pas"/>
     <File Path="spiral.pas"/>
     <File Path="spiral.fmx"/>

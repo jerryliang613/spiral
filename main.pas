@@ -5,66 +5,49 @@ uses System.Types, System.UITypes,FMX.Graphics;
 
 procedure DrawSpiral( loop: Integer; threshold:integer; gap:Single; centerPoint:TPointF; Canvas:TCanvas);
 implementation
+
+function GeneratePoint(angle:single; gap:single; centerPoint:TPointF):TPointF;
+begin
+     var x := gap*(1 + angle)* cos(angle);
+     var y := gap*(1 + angle)* sin(angle);
+     result:=TPointF.Create(x+centerPoint.X, y+centerPoint.Y);
+end;
+
+procedure DrawLine(startPoint:TPointF;endPoint:TPointF;thickness:single;color:TAlphaColor; Canvas:TCanvas);
+begin
+          Canvas.Stroke.Create(TBrushKind.Solid, TAlphaColor(color));
+          Canvas.Stroke.Thickness:=thickness;
+          Canvas.DrawLine(startPoint, endPoint, 100);
+end;
+
 procedure DrawSpiral(loop: Integer; threshold:integer; gap:Single; centerPoint:TPointF; Canvas:TCanvas);
-var
-  i, j, _loop: Integer;
-  x, y, x1, y1, angle, angle1: Single;
 
 begin
-  _loop := 0;
-  i := 0;
   var p:=pi();
-  var
-  a:=10;
+  var a:=2; var b:=5;
+  var angle:= 2*p*loop/threshold;
 
-  while true do
-  begin
-    angle := 0.1 * i;
-    angle1 := 0.1 * (i + 1);
-
-    if  angle/(2*p)>loop then
+  for var i := 0 to threshold-2 do
     begin
-        _loop := _loop + 1;
-        if _loop = loop then
-        begin
-          break;
-        end;
-        end;
+        var angle1:=angle*i;
+        var angle2:= angle*(i+1);
+        var
+          startPoint := GeneratePoint(angle1, gap, centerPoint);
+        var
+          endPoint := GeneratePoint(angle2,gap,centerPoint);
 
-    x := (a + gap * angle) * cos(angle);
-    y := (a + gap * angle) * sin(angle);
-    x1 := (a + gap * angle1) * cos(angle1);
-    y1 := (a + gap * angle1) * sin(angle1);
+          DrawLine(startPoint, startPoint,3,TAlphacolor($FF800000), Canvas );
+          DrawLine(endPoint, endPoint,3,TAlphacolor($FF800000), Canvas );
+          DrawLine(startPoint, endPoint, 1,TAlphaColor($FF000080 ), Canvas);
 
-    var
-    startPoint := TPointF.Create(x + centerPoint.X, y + centerPoint.Y);
-    var
-    endPoint := TPointF.Create(x1 + centerPoint.X, y1 + centerPoint.Y);
-
-    Canvas.Stroke.Create(TBrushKind.Solid, TAlphaColor($FF800000));
-    Canvas.Stroke.Thickness:=5;
-    Canvas.DrawLine(startPoint, startPoint, 100);
-    Canvas.DrawLine(endPoint, endPoint, 100);
-
-    Canvas.Stroke.Create(TBrushKind.Solid, TAlphaColor($FFC0C0C0));
-    Canvas.DrawLine(startPoint, endPoint, 100);
-    var
-      newx, newy: Single;
-    var
-      newPoint: TPointF;
-    var
-    sweepangle := 0.1/(threshold+1);
-    for j := 1 to threshold do
-    begin
-      newx :=  (a + gap * (angle+sweepangle*j)) * cos(angle+sweepangle*j);
-      newy :=  (a + gap * (angle+sweepangle*j)) * sin(angle+sweepangle*j);
-      newPoint := TPointF.Create(newx + centerPoint.X, newy + centerPoint.Y);
-      Canvas.Stroke.Create(TBrushKind.Solid, TAlphaColor($FF000080));
-      Canvas.Stroke.Thickness:=1;
-      Canvas.DrawLine(newPoint, newPoint, 50)
-    end;
-    i:=i+1;
-  end;
+        var sweepangle:=angle/10;
+        for var j := 0 to 9 do
+          begin
+            var spiralStart :=GeneratePoint(angle1+sweepangle*j, gap,centerPoint);
+            var spiralEnd := GeneratePoint(angle1+sweepangle*(j+1), gap,centerPoint);
+            DrawLine(spiralStart, spiralEnd,1,TAlphaColor($FFc0c0c0 ),Canvas);
+          end;
+    end
 
 end;
 
